@@ -1,0 +1,30 @@
+@use '../../Styles/Partials/mixins' as *;
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    &__svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 300px;
+        @include tablet-breakpoint {
+            height: 500px;
+        }
+        @include desktop-breakpoint {
+            height: 750px;
+        }    
+    }
+    &__shapeFill {
+        fill: #32E6F04D;
+    }
+    &__shape1 {
+        fill: #23D9AE;
+        opacity: 0.15;
+    }
+}
+

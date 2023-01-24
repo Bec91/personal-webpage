@@ -1,0 +1,18 @@
+// BREAKPOINTS
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+
+@mixin tablet-breakpoint {
+    @media screen and (min-width: $tablet-breakpoint){
+        @content;
+    }
+}
+
+@mixin desktop-breakpoint {
+    @media screen and (min-width: $desktop-breakpoint){
+        @content;
+    }
+}
+
