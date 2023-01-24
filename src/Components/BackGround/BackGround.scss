@@ -1,29 +1,38 @@
 @use '../../Styles/Partials/mixins' as *;
 
 .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     overflow: hidden;
-    line-height: 0;
+    padding-top: 150px;
+    &__backOne {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    &__backTwo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+        @include desktop-breakpoint {
+            top: auto;
+        }
+    }
     &__svg {
         position: relative;
         display: block;
-        width: calc(300% + 1.3px);
+        width: calc(200% + 1.3px);
         height: 300px;
-        @include tablet-breakpoint {
-            height: 500px;
-        }
-        @include desktop-breakpoint {
-            height: 750px;
-        }    
     }
     &__shapeFill {
+        opacity: 0.25;
         fill: #32E6F04D;
     }
     &__shape1 {
-        fill: #23D9AE;
+        fill: #3EA0F2;
         opacity: 0.15;
     }
 }
