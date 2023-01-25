@@ -1,1 +1,33 @@
 @use '../../Styles/Partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+
+.navbar {
+    font-family: 'Raleway';
+    padding: 2rem;
+    @include tablet-breakpoint {
+        padding: 3rem 2.5rem;
+    }
+    @include desktop-breakpoint {
+        padding: 5rem 4rem;
+    }
+
+    &__header {
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+        @include tablet-breakpoint {
+            padding-bottom: 0.75rem;
+        }
+        @include desktop-breakpoint {
+            font-size: 4.5rem;
+        }
+    
+    }
+    &__subHeader {
+        font-size: 1.5rem;
+        @include desktop-breakpoint {
+            font-size: 2.5rem;
+        }
+
+    }
+
+}
